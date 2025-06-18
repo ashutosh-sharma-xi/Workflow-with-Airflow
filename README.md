@@ -5,21 +5,25 @@ This guide outlines the essential steps and CLI commands to manage Airflow for l
 
 # ✅ 1. Set Up Environment
 ### Create virtual environment (optional but recommended)
-```python -m venv venv
+```
+python -m venv venv
 source venv/bin/activate
 ```
 
 ### Install Airflow with required extras (example: Postgres, Google)
-```pip install "apache-airflow[postgres,google]==3.0.2"
+```
+pip install "apache-airflow[postgres,google]==3.0.2"
 ```
 
 # 🗃️ 2.  Initialize Metadata Database
 ### Apply schema migrations (creates all necessary tables)
-```airflow db migrate
+```
+airflow db migrate
 ```
 
 # ⚙️ 3. Create Admin User (First-Time Only)
-```airflow users create \
+```
+airflow users create \
   --username admin \
   --firstname FIRSTNAME \
   --lastname LASTNAME \
@@ -30,21 +34,25 @@ source venv/bin/activate
 
 # 📂 4. Place DAGs in the DAGs Folder
 ### Default DAGs folder (can be customized in airflow.cfg)
-```~/airflow/dags/
+```
+~/airflow/dags/
 ```
 
 # 🚀 5. Start Airflow Services
 ### Start scheduler (processes DAGs & tasks)
-``` airflow scheduler
+```
+airflow scheduler
 ```
 
 ### In another terminal: start webserver (UI)
-```airflow webserver --port 8080
+```
+airflow webserver --port 8080
 ```
 # 📋 6. List and Manage DAGs
 ### List all available DAGs
-```airflow dags list
 ```
+airflow dags list
+
 
 ### Trigger a DAG run manually
 ```airflow dags trigger <dag_id>
