@@ -1,0 +1,5 @@
+apache-airflow==3.0.2
+apache-airflow[sqlite,celery,redis,async,statsd]==3.0.2
+
+graphviz 
+flask-appbuilder
