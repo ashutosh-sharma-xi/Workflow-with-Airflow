@@ -55,51 +55,63 @@ airflow dags list
 ```
 
 ### Trigger a DAG run manually
-```airflow dags trigger <dag_id>
+```
+airflow dags trigger <dag_id>
 ```
 ### Pause/unpause a DAG
-```airflow dags pause <dag_id>
+```
+airflow dags pause <dag_id>
 airflow dags unpause <dag_id>
 ```
 ### Show DAG details
-```airflow dags show <dag_id>
+```
+airflow dags show <dag_id>
 ```
 # 📊 7. Monitor DAG Runs and Tasks
 ### List recent DAG runs
-```airflow dags list-runs -d <dag_id>
+```
+airflow dags list-runs -d <dag_id>
 ```
 ### View task logs
-```airflow tasks logs <dag_id> <task_id> <execution_date>
+```
+airflow tasks logs <dag_id> <task_id> <execution_date>
 ```
 
 # 🧪 8. Test DAGs and Tasks Locally
 ### Check if DAG file is valid (syntax + import check)
-```airflow dags parse <path-to-dag-file>
+```
+airflow dags parse <path-to-dag-file>
 ```
 
 # Test a single task without affecting DB (debug run)
-```airflow tasks test <dag_id> <task_id> <execution_date>
+```
+airflow tasks test <dag_id> <task_id> <execution_date>
 ```
 
 # 🔄 9. Reset or Clean Metadata DB (Dangerous Ops)
 ### Completely wipe DB and start fresh (⚠️ Deletes all history!)
-```airflow db reset
+```
+airflow db reset
 ```
 
 ### Clean old DAG/task logs and metadata
-```airflow db clean
+```
+airflow db clean
 ```
 
 # 🔌 10. Additional Utilities
 ### Start interactive DB shell (SQLAlchemy)
-```airflow db shell
+```
+airflow db shell
 ```
 
 ### Check database health
-```airflow db check
+```
+airflow db check
 ```
 ### View Airflow configuration
-```airflow config list
+```
+airflow config list
 ```
 
 # 🧾 Notes
@@ -107,7 +119,8 @@ airflow dags unpause <dag_id>
 
 ## 💡 Use environment variables to override configuration:
 
-```AIRFLOW_HOME
+```
+AIRFLOW_HOME
 
 AIRFLOW__CORE__DAGS_FOLDER
 
