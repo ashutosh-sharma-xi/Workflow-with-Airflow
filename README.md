@@ -52,7 +52,7 @@ airflow webserver --port 8080
 ### List all available DAGs
 ```
 airflow dags list
-
+```
 
 ### Trigger a DAG run manually
 ```airflow dags trigger <dag_id>
